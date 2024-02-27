@@ -38,7 +38,15 @@ class KitetsuClient(fix.Application):
         
         fix.Session.sendToTarget(order, sessionID)
 
-def main(config_file):
+def main():
+    parser = argparse.ArgumentParser(description="Kitetsu QuickFIX Client")
+    parser.add_argument('-c', '--config', required=True, help='Path to FIX configuration file')
+    args = parser.parse_args()
+    if 'help' in args:
+        parser.print_help()
+        return
+    config_file = args.config
+
     try:
         settings = fix.SessionSettings(config_file)
         application = KitetsuClient()
@@ -53,8 +61,4 @@ def main(config_file):
         sys.exit()
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Kitetsu QuickFIX Client")
-    parser.add_argument('-c', '--config', required=True, help='Path to FIX configuration file')
-    args = parser.parse_args()
-    
-    main(args.config)
+    main()
