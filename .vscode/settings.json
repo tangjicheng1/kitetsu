@@ -1,0 +1,10 @@
+{
+    "clangd.fallbackFlags": [
+        "-I${workspaceFolder}/",
+        "-I/home/jicheng.tang/miniconda3/lib/python3.12/site-packages/nanobind/include",
+        "-I/home/jicheng.tang/miniconda3/include/python3.12",
+        "-I/Users/tangjicheng/miniconda3/include/python3.12",
+        "-I/Users/tangjicheng/miniconda3/lib/python3.12/site-packages/nanobind/include",
+        "-std=c++20"
+    ],
+}

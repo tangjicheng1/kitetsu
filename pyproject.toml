@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kitetsu"
+version = "0.0.2"
+description = "A Python package for kitetsu"
+authors = [{name = "tangjicheng", email = "tangjch15@gmail.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.12',
+    'Operating System :: POSIX :: Linux',
+]
+
+# dependencies = [
+#     "nanobind>=1.0"
+# ]
+
+[tool.setuptools]
+packages = ["kitetsu"]
+
+[tool.setuptools.package-data]
+"kitetsu" = ["*.so"]  # include shared library
+
+[project.scripts]
+kitetsu = "kitetsu.cli:main"
