@@ -1,11 +1,12 @@
 #include <fstream>
 #include <iostream>
+#include <string>
+#include <vector>
+
 #include <nanobind/nanobind.h>
 #include <nanobind/stl/string.h>
 #include <nanobind/stl/vector.h>
 #include <nanobind/trampoline.h>
-#include <string>
-#include <vector>
 
 int replaceSOH(const std::string &input_filename,
                 const std::string &output_filename) {
