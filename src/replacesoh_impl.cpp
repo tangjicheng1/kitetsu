@@ -9,7 +9,7 @@
 
 int replaceSOH(const std::string &input_filename,
                 const std::string &output_filename) {
-  const std::streamsize buffer_size = 8192; // Buffer size constant
+  const std::streamsize buffer_size = 8 * 1024 * 1024; // Buffer size constant
 
   std::ifstream input_file(input_filename, std::ios::binary);
   if (!input_file) {

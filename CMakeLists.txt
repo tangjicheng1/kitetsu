@@ -18,4 +18,4 @@ execute_process(
 
 find_package(nanobind CONFIG REQUIRED)
 
-nanobind_add_module(replacesoh_impl replacesoh_impl.cpp)
+nanobind_add_module(replacesoh_impl src/replacesoh_impl.cpp)
