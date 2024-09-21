@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "kitetsu"
-version = "0.0.5"
+version = "0.0.6"
 description = "A Python package for kitetsu"
 authors = [{name = "tangjicheng", email = "tangjch15@gmail.com"}]
 license = {text = "MIT"}
